@@ -46,10 +46,9 @@ export default function RecipeReviewCard({ item, loading }) {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-  console.log(loading)
 
   return (
-    <Card sx={{ maxWidth: 345, m: 2 }}>
+    <Card sx={{ maxWidth: 345, m: 2 }} >
       <CardHeader
         avatar={
           loading ? (

@@ -13,8 +13,9 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { useState } from 'react';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Link } from 'react-router-dom';
-import { Badge, Stack } from '@mui/material';
+import { Badge,  Stack } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const pages = ['Products',];
@@ -38,6 +39,7 @@ function ResponsiveAppBar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
 
   return (
     <AppBar position="static">
@@ -137,6 +139,10 @@ function ResponsiveAppBar() {
 
           <Box sx={{ flexGrow: 0 }}>
             <Stack direction="row" spacing={2} alignItems="center">
+                
+              <IconButton aria-label="add to favorites">
+                <FavoriteIcon sx={{ color: 'white', cursor: 'pointer'}} />
+              </IconButton>
               <Badge badgeContent={0} color="secondary">
                 <ShoppingCartIcon color="action" sx={{ color: 'white', cursor: 'pointer' }} />
               </Badge>

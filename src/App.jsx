@@ -42,13 +42,11 @@ export default function App() {
       setLoading(false);
     }
   };
-  console.log(allProducts)
   useEffect(() => {
     setLoading(true)
     productsData()
     allProductsData()
   }, [])
-  console.log(allProducts)
 
   return (
     <>

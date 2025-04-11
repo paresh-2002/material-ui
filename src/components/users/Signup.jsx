@@ -1,7 +1,6 @@
 import { Box, Button, Checkbox, Container, FormControlLabel, Radio, RadioGroup, TextField, Typography } from '@mui/material'
 import React, { useState } from 'react'
 
-const label = { inputProps: { 'aria-label': 'Checkbox demo' }, label: 'I agree to the terms and conditions' };
 function Signup() {
     const [loading, setLoading] = useState(false)
     function addData(e) {
@@ -10,6 +9,7 @@ function Signup() {
         setTimeout(() => {
             setLoading(false)
         }, 2000)
+
     }
     return (
         <Box sx={{ backgroundColor: '#f5f5f5', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: 'auto' }} maxWidth={'sm'}>
@@ -34,7 +34,9 @@ function Signup() {
                             <FormControlLabel value="other" control={<Radio />} label="Other" />
                         </RadioGroup>
                     </Box>
-                    <Checkbox {...label} />
+                    <Box>
+                        <FormControlLabel control={<Checkbox />} label="I agree to the terms and conditions" />
+                    </Box>
                     <Box fullWidth sx={{ textAlign: 'center' }}>
                         <Button loading={loading} variant="outlined" loadingPosition="center" onClick={addData}>
                             Submit
